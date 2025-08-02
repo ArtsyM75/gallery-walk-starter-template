@@ -1,20 +1,21 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import '../styles/global.css';
 ---
 
 <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-<Header />
 
 <main id="main">
   <section class="hero">
     <div class="container">
-      <h2>Edmonton Gallery Walk</h2>
-      <p>Discover art and culture in the heart of 124 Street Area!</p>
-      <a href="#galleries" class="cta-button">Explore Galleries</a>
+      <div class="hero-content">
+        <img src="/images/ShoeREVTYPE.jpg" alt="Edmonton Gallery Walk Logo" class="hero-logo" />
+        <h1>Edmonton Gallery Walk</h1>
+        <p class="hero-subtitle">Discover art and culture in the heart of 124 Street Area!</p>
+        <a href="#galleries" class="cta-button">Explore Galleries</a>
+      </div>
     </div>
   </section>
 
@@ -24,8 +25,8 @@ import '../styles/global.css';
         <div class="about-text">
           <h2>About Edmonton Gallery Walk</h2>
           <p>Since 1981, the Edmonton Gallery Walk has been a cornerstone of the city's vibrant arts community, promoting Canadian artists and fostering cultural enrichment.</p>
-          <p>Located in the <span class="highlight">124 Street area, between 103 Avenue and Stony Plane Road</span>, our gallery walk event brings together art enthusiasts, collectors, and curious visitors in a dynamic neighborhood filled with restaurants and boutiques within a walkable distance.</p>
-          <p>Visit the member galleries outside of official Gallery Walk's for regular exhibitions, artist talks, and special events that celebrate the best of Canadian contemporary and traditional art.</p>
+          <p>Located in the <span class="highlight">124 Street area, between 103 Avenue and Stony Plain Road</span>, our gallery walk event brings together art enthusiasts, collectors, and curious visitors in a dynamic neighborhood filled with restaurants and boutiques within a walkable distance.</p>
+          <p>Visit the member galleries outside of official Gallery Walks for regular exhibitions, artist talks, and special events that celebrate the best of Canadian contemporary and traditional art.</p>
         </div>
         <div class="about-image">
           <img src="/images/gallery-district.jpg" alt="124 Street Area" loading="lazy" />
@@ -41,36 +42,36 @@ import '../styles/global.css';
         <article class="gallery-card">
           <div class="gallery-card-content">
             <h3>Bearclaw Gallery</h3>
-            <p>Specializing in Indigenous art and contemporary works</p>
-            <a href="https://bearclawgallery.com/" class="gallery-link">Visit Gallery →</a>
+            <p>Specializing in Indigenous art and contemporary works.</p>
+            <a href="https://bearclawgallery.com/" class="gallery-link" target="_blank" rel="noopener">Visit Gallery →</a>
           </div>
         </article>
         <article class="gallery-card">
           <div class="gallery-card-content">
             <h3>Bugera Lamb Gallery</h3>
-            <p>Contemporary artworks from artists across Canada</p>
-            <a href="https://bugeralambart.ca/" class="gallery-link">Visit Gallery →</a>
+            <p>Contemporary artworks from artists across Canada.</p>
+            <a href="https://bugeralambart.ca/" class="gallery-link" target="_blank" rel="noopener">Visit Gallery →</a>
           </div>
         </article>
         <article class="gallery-card">
           <div class="gallery-card-content">
             <h3>Lando Gallery</h3>
-            <p>Promotes recognized Canadian and International fine artists</p>
-            <a href="https://www.landogallery.com/" class="gallery-link">Visit Gallery →</a>
+            <p>Promotes recognized Canadian and International fine artists.</p>
+            <a href="https://www.landogallery.com/" class="gallery-link" target="_blank" rel="noopener">Visit Gallery →</a>
           </div>
         </article>
         <article class="gallery-card">
           <div class="gallery-card-content">
             <h3>Peter Robertson Gallery</h3>
             <p>Representing Canadian artists from different generations, focusing on contemporary painting, sculpture, printmaking, and photography.</p>
-            <a href="https://www.probertsongallery.com/" class="gallery-link">Visit Gallery →</a>
+            <a href="https://www.probertsongallery.com/" class="gallery-link" target="_blank" rel="noopener">Visit Gallery →</a>
           </div>
         </article>
         <article class="gallery-card">
           <div class="gallery-card-content">
             <h3>West End Gallery</h3>
-            <p>Proudly Showcasing Canadian Art Since 1975</p>
-            <a href="https://www.westendgalleryltd.com" class="gallery-link">Visit Gallery →</a>
+            <p>Proudly showcasing Canadian art since 1975.</p>
+            <a href="https://www.westendgalleryltd.com" class="gallery-link" target="_blank" rel="noopener">Visit Gallery →</a>
           </div>
         </article>
       </div>
