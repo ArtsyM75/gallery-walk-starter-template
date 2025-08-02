@@ -5,46 +5,113 @@ import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
-</html>
+<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+<Header />
+
+<main id="main">
+  <section class="hero">
+    <div class="container">
+      <h2>Edmonton Gallery Walk</h2>
+      <p>Discover art and culture in the heart of 124 Street Area!</p>
+      <a href="#galleries" class="cta-button">Explore Galleries</a>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>About Edmonton Gallery Walk</h2>
+          <p>Since 1981, the Edmonton Gallery Walk has been a cornerstone of the city's vibrant arts community, promoting Canadian artists and fostering cultural enrichment.</p>
+          <p>Located in the <span class="highlight">124 Street area, between 103 Avenue and Stony Plane Road</span>, our gallery walk event brings together art enthusiasts, collectors, and curious visitors in a dynamic neighborhood filled with restaurants and boutiques within a walkable distance.</p>
+          <p>Visit the member galleries outside of official Gallery Walk's for regular exhibitions, artist talks, and special events that celebrate the best of Canadian contemporary and traditional art.</p>
+        </div>
+        <div class="about-image">
+          <img src="/images/gallery-district.jpg" alt="124 Street Area" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="galleries" class="galleries">
+    <div class="container">
+      <h2>Member Galleries</h2>
+      <div class="gallery-grid">
+        <article class="gallery-card">
+          <div class="gallery-card-content">
+            <h3>Bearclaw Gallery</h3>
+            <p>Specializing in Indigenous art and contemporary works</p>
+            <a href="https://bearclawgallery.com/" class="gallery-link">Visit Gallery →</a>
+          </div>
+        </article>
+        <article class="gallery-card">
+          <div class="gallery-card-content">
+            <h3>Bugera Lamb Gallery</h3>
+            <p>Contemporary artworks from artists across Canada</p>
+            <a href="https://bugeralambart.ca/" class="gallery-link">Visit Gallery →</a>
+          </div>
+        </article>
+        <article class="gallery-card">
+          <div class="gallery-card-content">
+            <h3>Lando Gallery</h3>
+            <p>Promotes recognized Canadian and International fine artists</p>
+            <a href="https://www.landogallery.com/" class="gallery-link">Visit Gallery →</a>
+          </div>
+        </article>
+        <article class="gallery-card">
+          <div class="gallery-card-content">
+            <h3>Peter Robertson Gallery</h3>
+            <p>Representing Canadian artists from different generations, focusing on contemporary painting, sculpture, printmaking, and photography.</p>
+            <a href="https://www.probertsongallery.com/" class="gallery-link">Visit Gallery →</a>
+          </div>
+        </article>
+        <article class="gallery-card">
+          <div class="gallery-card-content">
+            <h3>West End Gallery</h3>
+            <p>Proudly Showcasing Canadian Art Since 1975</p>
+            <a href="https://www.westendgalleryltd.com" class="gallery-link">Visit Gallery →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="events" class="events">
+    <div class="container">
+      <h2>Upcoming Events</h2>
+      <div class="event-card">
+        <span class="event-date">September 27 and 28, 2025</span>
+        <h3>Fall Gallery Walk</h3>
+        <p>Join us for our seasonal gallery walk featuring new exhibitions.</p>
+      </div>
+      <div class="event-card">
+        <span class="event-date">April 2026</span>
+        <h3>Spring Gallery Walk</h3>
+        <p>Dates to be confirmed after completion of the Fall Gallery Walk.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <div class="contact-info">
+        <div class="contact-item">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+          </svg>
+          <span>124 Street, Edmonton, AB</span>
+        </div>
+        <div class="contact-item">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+          <a href="mailto:info@edmontongallerywalk.com">info@edmontongallerywalk.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<Footer />
