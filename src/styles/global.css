@@ -136,20 +136,129 @@ hr {
   }
 }
 
-.sr-only {
-  border: 0;
-  padding: 0;
-  margin: 0;
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
-  clip: rect(1px 1px 1px 1px);
-  /* maybe deprecated but we need to support legacy browsers */
-  clip: rect(1px, 1px, 1px, 1px);
-  /* modern browsers, clip-path works inwards from each corner */
-  clip-path: inset(50%);
-  /* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
-  white-space: nowrap;
+/* Homepage and Gallery Walk custom styles */
+
+.hero {
+  background: linear-gradient(120deg, #e0e7ff 0%, #fff 100%);
+  text-align: center;
+  padding: 4rem 0 3rem 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.75em 2em;
+  border-radius: 2em;
+  font-weight: 600;
+  margin-top: 1em;
+  transition: background 0.2s;
+}
+.cta-button:hover {
+  background: var(--accent-dark);
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  margin: 3rem 0;
+}
+.about-text {
+  flex: 2;
+}
+.about-image {
+  flex: 1;
+  min-width: 250px;
+}
+.about-image img {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+.highlight {
+  background: #f8e9a1;
+  padding: 0.1em 0.3em;
+  border-radius: 0.3em;
+}
+
+.galleries {
+  margin: 3rem 0;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.gallery-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 2rem 1.5rem;
+  transition: transform 0.15s;
+}
+.gallery-card:hover {
+  transform: translateY(-6px) scale(1.03);
+}
+.gallery-link {
+  color: var(--accent);
+  font-weight: 600;
+  margin-top: 1em;
+  display: inline-block;
+}
+
+.events {
+  background: #f3f6fb;
+  padding: 3rem 0;
+}
+.event-card {
+  background: #fff;
+  border-radius: 0.8rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 1.5rem 1rem;
+  margin-bottom: 1.5rem;
+}
+.event-date {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.contact {
+  margin: 3rem 0;
+}
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  font-size: 1.1em;
+}
+.contact-item svg {
+  width: 1.5em;
+  height: 1.5em;
+  color: var(--accent);
+}
+
+@media (max-width: 800px) {
+  .about-content, .contact-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .about-image {
+    min-width: 100%;
+  }
 }
